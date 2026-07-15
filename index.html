@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>Bhavani Borewells &amp; Lifting Services | Hyderabad, Patancheru, Isnapur, Sangareddy</title>
+<meta name="description" content="Borewell drilling, motor sales &amp; service, pump lifting and pipeline fitting in Hyderabad, Patancheru, Isnapur and Sangareddy. Call or WhatsApp 94926 86222.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --iron:#161d1a;
+    --iron-2:#20302c;
+    --rust:#c1541f;
+    --rust-dark:#983f16;
+    --amber:#f2a900;
+    --concrete:#efece4;
+    --concrete-2:#e2ddd0;
+    --well:#1f5c6b;
+    --steel:#5a635c;
+    --ink:#161d1a;
+    --white:#fffdf9;
+    --radius:2px;
+    --display: 'Oswald', sans-serif;
+    --body: 'Inter', sans-serif;
+    --mono: 'Space Mono', monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--body);
+    background:var(--concrete);
+    color:var(--ink);
+    line-height:1.5;
+    padding-bottom:72px; /* room for sticky bar */
+  }
+  img,svg{display:block; max-width:100%;}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:520px; margin:0 auto; padding:0 20px;}
+  @media(min-width:640px){ .wrap{max-width:760px;} }
+
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--rust);
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{content:""; width:16px; height:2px; background:var(--rust); display:inline-block;}
+
+  h1,h2,h3{font-family:var(--display); text-transform:uppercase; line-height:1.05; letter-spacing:.01em;}
+
+  /* ===== TOP BAR ===== */
+  .topbar{
+    position:sticky; top:0; z-index:40;
+    background:var(--iron);
+    color:var(--concrete);
+    border-bottom:3px solid var(--rust);
+  }
+  .topbar .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 20px;
+  }
+  .brand{display:flex; flex-direction:column; line-height:1.1;}
+  .brand .bh{
+    font-family:var(--display); font-weight:700; font-size:17px; letter-spacing:.02em;
+    text-transform:uppercase; color:var(--white);
+  }
+  .brand .bh span{color:var(--amber);}
+  .brand .tagline{font-family:var(--mono); font-size:9.5px; letter-spacing:.08em; color:var(--concrete-2); text-transform:uppercase; margin-top:1px;}
+  .topbar-call{
+    display:flex; align-items:center; gap:6px;
+    background:var(--rust); color:var(--white);
+    padding:8px 12px; font-family:var(--mono); font-size:13px; font-weight:700;
+    border-radius:var(--radius);
+    white-space:nowrap;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    background:
+      radial-gradient(ellipse at 30% -10%, rgba(242,169,0,0.13), transparent 55%),
+      linear-gradient(180deg, var(--iron) 0%, var(--iron-2) 100%);
+    color:var(--white);
+    padding:36px 0 30px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{position:relative; z-index:2;}
+  .hero-rig{
+    position:absolute; right:-30px; top:0; bottom:0; width:220px;
+    opacity:.9; z-index:1; pointer-events:none;
+  }
+  .hero h1{
+    font-size:clamp(30px,8vw,44px);
+    color:var(--white);
+    margin-top:14px;
+    max-width:280px;
+  }
+  .hero h1 em{font-style:normal; color:var(--amber);}
+  .hero p.lead{
+    font-family:var(--body); font-size:15px; color:var(--concrete-2);
+    margin-top:14px; max-width:300px;
+  }
+  .hero-ctas{display:flex; gap:10px; margin-top:24px; flex-wrap:wrap;}
+  .btn{
+    font-family:var(--mono); font-weight:700; font-size:13.5px;
+    letter-spacing:.03em; text-transform:uppercase;
+    padding:13px 18px;
+    border-radius:var(--radius);
+    display:inline-flex; align-items:center; gap:8px;
+    border:2px solid transparent;
+    transition:transform .12s ease;
+  }
+  .btn:active{transform:scale(.97);}
+  .btn-primary{background:var(--amber); color:var(--iron);}
+  .btn-outline{background:transparent; color:var(--white); border-color:rgba(255,255,255,.35);}
+  .btn svg{width:16px; height:16px; flex-shrink:0;}
+
+  .hero-strip{
+    margin-top:26px; padding-top:16px; border-top:1px solid rgba(255,255,255,.14);
+    display:grid; grid-template-columns:repeat(3,1fr); gap:8px;
+  }
+  .hero-strip div{font-family:var(--mono); font-size:10.5px; color:var(--concrete-2); text-transform:uppercase; letter-spacing:.04em;}
+  .hero-strip strong{display:block; font-family:var(--display); font-size:20px; color:var(--amber); text-transform:none; letter-spacing:0;}
+
+  /* ===== SECTION SHARED ===== */
+  section{padding:44px 0;}
+  section > .wrap > h2{font-size:clamp(24px,7vw,30px); margin-top:8px; color:var(--iron); max-width:320px;}
+  section > .wrap > p.sub{font-family:var(--body); color:var(--steel); font-size:14.5px; margin-top:10px; max-width:340px;}
+
+  /* ===== SERVICES ===== */
+  .services{background:var(--white);}
+  .service-grid{
+    margin-top:26px;
+    display:grid; grid-template-columns:1fr 1fr; gap:12px;
+  }
+  .service-card{
+    background:var(--concrete);
+    border:1px solid var(--concrete-2);
+    border-radius:var(--radius);
+    padding:16px 14px;
+    position:relative;
+  }
+  .service-card::before{
+    content:attr(data-n);
+    font-family:var(--mono); font-size:11px; color:var(--rust); font-weight:700;
+  }
+  .service-card .icon{width:30px; height:30px; margin:10px 0 8px; color:var(--well);}
+  .service-card h3{font-size:15.5px; color:var(--iron); letter-spacing:0;}
+  .service-card p{font-family:var(--body); font-size:12.5px; color:var(--steel); margin-top:6px; line-height:1.4;}
+
+  /* ===== AREAS ===== */
+  .areas{background:var(--iron-2); color:var(--white);}
+  .areas .eyebrow{color:var(--amber);}
+  .areas .eyebrow::before{background:var(--amber);}
+  .areas h2{color:var(--white);}
+  .areas p.sub{color:var(--concrete-2);}
+  .area-list{
+    margin-top:22px; display:flex; flex-direction:column; gap:0;
+    border-top:1px solid rgba(255,255,255,.15);
+  }
+  .area-row{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 2px; border-bottom:1px solid rgba(255,255,255,.15);
+    font-family:var(--display); text-transform:uppercase; font-size:17px;
+  }
+  .area-row span.tag{
+    font-family:var(--mono); font-size:10px; letter-spacing:.05em;
+    color:var(--amber); border:1px solid var(--amber); padding:3px 7px; border-radius:99px;
+  }
+
+  /* ===== WHY US ===== */
+  .why{background:var(--concrete);}
+  .why-list{margin-top:24px; display:flex; flex-direction:column; gap:18px;}
+  .why-item{display:flex; gap:14px; align-items:flex-start;}
+  .why-item .num{
+    font-family:var(--mono); font-size:12px; color:var(--white); background:var(--rust);
+    width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+    flex-shrink:0; margin-top:2px; font-weight:700;
+  }
+  .why-item h3{font-size:15px; text-transform:none; font-family:var(--body); font-weight:700; color:var(--iron);}
+  .why-item p{font-size:13px; color:var(--steel); margin-top:3px;}
+
+  /* ===== CONTACT ===== */
+  .contact{background:var(--white);}
+  .contact-card{
+    margin-top:24px; background:var(--iron); color:var(--white);
+    border-radius:var(--radius); padding:26px 22px;
+    background-image: linear-gradient(135deg, rgba(242,169,0,.10), transparent 60%);
+  }
+  .contact-card .eyebrow{color:var(--amber); margin-bottom:8px;}
+  .contact-card .eyebrow::before{background:var(--amber);}
+  .contact-card h3{font-size:22px; color:var(--white);}
+  .phone-big{
+    font-family:var(--mono); font-size:28px; font-weight:700; color:var(--amber);
+    margin-top:10px; letter-spacing:.02em;
+  }
+  .contact-actions{display:flex; gap:10px; margin-top:18px; flex-wrap:wrap;}
+  .hours{
+    margin-top:20px; padding-top:16px; border-top:1px solid rgba(255,255,255,.15);
+    font-family:var(--mono); font-size:12px; color:var(--concrete-2); display:flex; justify-content:space-between;
+  }
+
+  footer{
+    padding:22px 20px 100px; text-align:center;
+    font-family:var(--mono); font-size:11px; color:var(--steel);
+  }
+
+  /* ===== STICKY BOTTOM BAR ===== */
+  .stickybar{
+    position:fixed; bottom:0; left:0; right:0; z-index:50;
+    display:flex; gap:1px;
+    background:var(--concrete-2);
+    border-top:2px solid var(--iron);
+  }
+  .stickybar a{
+    flex:1; display:flex; align-items:center; justify-content:center; gap:8px;
+    padding:14px 8px;
+    font-family:var(--mono); font-weight:700; font-size:13.5px; text-transform:uppercase;
+  }
+  .stickybar a svg{width:18px; height:18px;}
+  .stickybar .call{background:var(--rust); color:var(--white);}
+  .stickybar .wa{background:#25d366; color:var(--white);}
+
+  @media(min-width:640px){
+    .stickybar{display:none;}
+    body{padding-bottom:0;}
+    .service-grid{grid-template-columns:repeat(3,1fr);}
+  }
+</style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="wrap">
+      <div class="brand">
+        <div class="bh">Bhavani <span>Borewells</span></div>
+        <div class="tagline">&amp; Lifting Services</div>
+      </div>
+      <a class="topbar-call" href="tel:+919492686222" aria-label="Call now">
+        <svg viewBox="0 0 24 24" fill="none" width="14" height="14"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1.1-1.1 1.1C10.6 21.1 2.9 13.4 2.9 4.1 2.9 3.5 3.4 3 4 3h3.3c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+        94926 86222
+      </a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="hero-rig" viewBox="0 0 200 500" xmlns="http://www.w3.org/2000/svg">
+      <!-- ground layers -->
+      <rect x="0" y="230" width="200" height="270" fill="#2a2018" opacity="0.5"/>
+      <rect x="0" y="300" width="200" height="200" fill="#231b12" opacity="0.6"/>
+      <rect x="0" y="400" width="200" height="100" fill="#12232a" opacity="0.7"/>
+      <line x1="0" y1="230" x2="200" y2="230" stroke="#4a524c" stroke-width="1" stroke-dasharray="4 4" opacity=".5"/>
+      <!-- rig mast -->
+      <line x1="70" y1="30" x2="70" y2="230" stroke="#c1541f" stroke-width="4"/>
+      <line x1="130" y1="30" x2="130" y2="230" stroke="#c1541f" stroke-width="4"/>
+      <line x1="70" y1="60" x2="130" y2="90" stroke="#8a5a3a" stroke-width="2" opacity=".6"/>
+      <line x1="130" y1="60" x2="70" y2="90" stroke="#8a5a3a" stroke-width="2" opacity=".6"/>
+      <line x1="70" y1="110" x2="130" y2="140" stroke="#8a5a3a" stroke-width="2" opacity=".6"/>
+      <line x1="130" y1="110" x2="70" y2="140" stroke="#8a5a3a" stroke-width="2" opacity=".6"/>
+      <!-- drill string -->
+      <g id="drillGroup">
+        <rect x="96" y="30" width="8" height="200" fill="#f2a900"/>
+        <path d="M92 225 L108 225 L100 250 Z" fill="#f2a900"/>
+      </g>
+      <!-- water table -->
+      <path d="M0 430 Q25 420 50 430 T100 430 T150 430 T200 430 V500 H0 Z" fill="#1f5c6b" opacity=".8"/>
+      <path d="M0 445 Q25 435 50 445 T100 445 T150 445 T200 445 V500 H0 Z" fill="#1f5c6b" opacity=".5"/>
+    </svg>
+
+    <div class="wrap">
+      <div class="eyebrow">Hyderabad &middot; Patancheru &middot; Isnapur &middot; Sangareddy</div>
+      <h1>We find the <em>water</em>.<br>You keep it flowing.</h1>
+      <p class="lead">Borewell drilling, motor &amp; pump sales, lifting service and pipeline fitting &mdash; one call away, on site fast.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="tel:+919492686222">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1.1-1.1 1.1C10.6 21.1 2.9 13.4 2.9 4.1 2.9 3.5 3.4 3 4 3h3.3c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+          Call Now
+        </a>
+        <a class="btn btn-outline" href="https://wa.me/919492686222?text=Hi%2C%20I%20need%20borewell%2Fmotor%20service." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1-1.3-.7-2.2-1.2-3.1-2.7-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4-.1-.1-.5-1.2-.7-1.7-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 4 3.4.6.2 1 .4 1.3.5.6.2 1.1.1 1.5-.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1 0-.1-.2-.2-.4-.3z" fill="currentColor"/></svg>
+          WhatsApp
+        </a>
+      </div>
+
+      <div class="hero-strip">
+        <div><strong>24/7</strong>Emergency call-out</div>
+        <div><strong>4</strong>Areas covered</div>
+        <div><strong>All</strong>Motor brands serviced</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="wrap">
+      <div class="eyebrow">What we do</div>
+      <h2>Borewell to tap, handled end to end</h2>
+      <p class="sub">Drilling, motors, lifting and fittings &mdash; sales and service under one roof.</p>
+
+      <div class="service-grid">
+        <div class="service-card" data-n="01">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v14M8 8l4-4 4 4M6 22c0-3 2.7-5 6-5s6 2 6 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Borewell Drilling</h3>
+          <p>New borewells for home, farm and commercial sites.</p>
+        </div>
+        <div class="service-card" data-n="02">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>Motor Sales</h3>
+          <p>Submersible &amp; open-well motors, single &amp; three-phase.</p>
+        </div>
+        <div class="service-card" data-n="03">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v18M7 8l5-5 5 5M17 16l-5 5-5-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Motor Lifting</h3>
+          <p>Pump &amp; motor removal, inspection and re-installation.</p>
+        </div>
+        <div class="service-card" data-n="04">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12h4l2-4 4 8 2-4h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Repair &amp; Service</h3>
+          <p>Motor burn-outs, low yield, tripping &mdash; diagnosed on site.</p>
+        </div>
+        <div class="service-card" data-n="05">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h6M15 12h6M9 12a3 3 0 006 0 3 3 0 00-6 0z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <h3>Pipeline Fitting</h3>
+          <p>Riser pipes, foot valves, cables and panel connections.</p>
+        </div>
+        <div class="service-card" data-n="06">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21c4-4.5 7-8 7-11.5A7 7 0 105 9.5C5 13 8 16.5 12 21z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <h3>Low Yield Fix</h3>
+          <p>Re-drilling and flushing to restore weak or dry borewells.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AREAS -->
+  <section class="areas">
+    <div class="wrap">
+      <div class="eyebrow">Service area</div>
+      <h2>On site across four zones</h2>
+      <p class="sub">Based locally &mdash; no long wait for a technician to reach you.</p>
+      <div class="area-list">
+        <div class="area-row">Hyderabad <span class="tag">Covered</span></div>
+        <div class="area-row">Patancheru <span class="tag">Covered</span></div>
+        <div class="area-row">Isnapur <span class="tag">Covered</span></div>
+        <div class="area-row">Sangareddy <span class="tag">Covered</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why">
+    <div class="wrap">
+      <div class="eyebrow">Why Bhavani</div>
+      <h2>Straight answers, fair pricing</h2>
+      <div class="why-list">
+        <div class="why-item">
+          <div class="num">1</div>
+          <div><h3>Experienced crew</h3><p>Years of hands-on drilling and pump work across the region.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="num">2</div>
+          <div><h3>Own equipment</h3><p>No sub-contracting delays &mdash; rig, lifting gear and tools ready to move.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="num">3</div>
+          <div><h3>Genuine parts</h3><p>Motors and fittings from trusted brands, with service support after sale.</p></div>
+        </div>
+        <div class="why-item">
+          <div class="num">4</div>
+          <div><h3>Clear estimates</h3><p>You know the cost before work starts &mdash; no surprises on the bill.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <div class="wrap">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Talk to us today</h2>
+      <p class="sub">Call for an on-site visit or send your location on WhatsApp.</p>
+
+      <div class="contact-card">
+        <div class="eyebrow">Direct line</div>
+        <h3>Bhavani Borewells &amp; Lifting Services</h3>
+        <a class="phone-big" href="tel:+919492686222">94926 86222</a>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="tel:+919492686222">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1.1-1.1 1.1C10.6 21.1 2.9 13.4 2.9 4.1 2.9 3.5 3.4 3 4 3h3.3c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+            Call Now
+          </a>
+          <a class="btn btn-outline" href="https://wa.me/919492686222?text=Hi%2C%20I%20need%20borewell%2Fmotor%20service." target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1-1.3-.7-2.2-1.2-3.1-2.7-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4-.1-.1-.5-1.2-.7-1.7-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 4 3.4.6.2 1 .4 1.3.5.6.2 1.1.1 1.5-.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1 0-.1-.2-.2-.4-.3z" fill="currentColor"/></svg>
+            WhatsApp
+          </a>
+        </div>
+        <div class="hours">
+          <span>Mon &ndash; Sun</span>
+          <span>6:00 AM &ndash; 9:00 PM</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Bhavani Borewells &amp; Lifting Services &mdash; Hyderabad &middot; Patancheru &middot; Isnapur &middot; Sangareddy
+  </footer>
+
+  <!-- STICKY MOBILE BAR -->
+  <div class="stickybar">
+    <a class="call" href="tel:+919492686222">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1.1.5 1.1 1.1V20c0 .6-.5 1.1-1.1 1.1C10.6 21.1 2.9 13.4 2.9 4.1 2.9 3.5 3.4 3 4 3h3.3c.6 0 1.1.5 1.1 1.1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+      Call
+    </a>
+    <a class="wa" href="https://wa.me/919492686222?text=Hi%2C%20I%20need%20borewell%2Fmotor%20service." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4c1.4.8 3.1 1.2 4.8 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.5 0-3-.4-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.7.9-.1.2-.3.2-.5.1-1.3-.7-2.2-1.2-3.1-2.7-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4-.1-.1-.5-1.2-.7-1.7-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.3c.1.2 1.6 2.5 4 3.4.6.2 1 .4 1.3.5.6.2 1.1.1 1.5-.1.5-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1 0-.1-.2-.2-.4-.3z" fill="currentColor"/></svg>
+      WhatsApp
+    </a>
+  </div>
+
+</body>
+</html>
